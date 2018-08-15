@@ -28,10 +28,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.32746490162356068</xmin>
-      <ymin>-34.11385632151088743</ymin>
-      <xmax>20.59418681727425948</xmax>
-      <ymax>-33.96834839245503446</ymax>
+      <xmin>20.29993691781576004</xmin>
+      <ymin>-34.10601155928586081</ymin>
+      <xmax>20.56665883346645884</xmax>
+      <ymax>-33.96050363023000784</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -111,6 +111,63 @@
           <prop k="style" v="solid"/>
         </layer>
       </symbol>
+      <ComposerLegend symbolWidth="7" title="범례" rasterBorderWidth="0" titleAlignment="1" map="0" wmsLegendWidth="50" rasterBorderColor="0,0,0,255" wrapChar="" fontColor="#000000" legendFilterByAtlas="0" columnCount="1" wmsLegendHeight="25" columnSpace="2" symbolHeight="4" equalColumnWidth="0" resizeToContents="1" splitLayer="0" boxSpace="2" rasterBorder="1">
+        <styles>
+          <style marginBottom="2" name="title">
+            <styleFont description=".Helvetica Neue DeskInterface,16,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="group">
+            <styleFont description=".Helvetica Neue DeskInterface,14,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="subgroup">
+            <styleFont description=".Helvetica Neue DeskInterface,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" name="symbol">
+            <styleFont description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+          <style marginTop="2" marginLeft="2" name="symbolLabel">
+            <styleFont description=".Helvetica Neue DeskInterface,12,-1,5,50,0,0,0,0,0" style=""/>
+          </style>
+        </styles>
+        <layer-tree-group expanded="1" checked="Qt::Checked" name="">
+          <customproperties/>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="place_basic_map_20180814140431366" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/place(basic_map).shp" name="place(basic_map)">
+            <customproperties>
+              <property key="legend/title-label" value="Places(basic_map)"/>
+            </customproperties>
+          </layer-tree-layer>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="roads20180814131017862" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/roads.shp" name="roads">
+            <customproperties>
+              <property key="legend/title-label" value="Roads and Streets(basic_map)"/>
+            </customproperties>
+          </layer-tree-layer>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="river_basic_map_20180814135815883" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/river(basic_map).shp" name="river(basic_map)">
+            <customproperties>
+              <property key="legend/title-label" value="Rivers(basic_map)"/>
+            </customproperties>
+          </layer-tree-layer>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="natural_basic_map_20180814140034645" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/natural(basic_map).shp" name="water(basic_map)">
+            <customproperties>
+              <property key="legend/title-label" value="Surface Water(basic_map)"/>
+            </customproperties>
+          </layer-tree-layer>
+          <layer-tree-layer expanded="1" providerKey="spatialite" checked="Qt::Checked" id="landuse20180814134412627" source="dbname='/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/landuse.sqlite' table=&quot;landuse&quot; (geometry) sql=" name="landuse">
+            <customproperties>
+              <property key="legend/label-0" value="Residential"/>
+              <property key="legend/label-5" value="Swellendam"/>
+              <property key="legend/label-6" value="Rural, small"/>
+              <property key="legend/label-7" value="Rural, large"/>
+              <property key="legend/node-order" value="6,7,5,0"/>
+              <property key="legend/title-style" value="hidden"/>
+            </customproperties>
+          </layer-tree-layer>
+        </layer-tree-group>
+        <ComposerItem pagey="82.0066" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="0" y="82.0066" visibility="1" zValue="4" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="70.8688" outlineWidth="0.3" excludeFromExports="0" uuid="{5ee4cd3e-ed47-4fea-80ad-13f83d3c1551}" height="58.9984" itemRotation="0" frame="false" pagex="0">
+          <FrameColor alpha="255" red="0" blue="0" green="0"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLegend>
       <ComposerLabel valign="128" marginX="1" marginY="1" labelText="Swellendam" htmlState="0" halign="4">
         <LabelFont description="Helvetica,36,-1,5,75,0,0,0,0,0" style="볼드체"/>
         <FontColor red="0" blue="0" green="0"/>
@@ -121,11 +178,11 @@
         </ComposerItem>
       </ComposerLabel>
       <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
-        <Extent ymin="-34.12225998800180804" xmin="20.32746490162356068" ymax="-33.95373705818669663" xmax="20.59418681727425948"/>
+        <Extent ymin="-34.12225998800180804" xmin="20.32746490162356068" ymax="-33.92031339773600962" xmax="20.59418681727425948"/>
         <LayerSet/>
         <Grid/>
         <AtlasMap scalingMode="2" atlasDriven="0" margin="0.10000000000000001"/>
-        <ComposerItem pagey="24.3417" page="1" id="" lastValidViewScaleFactor="2.0381" positionMode="0" positionLock="false" x="17.6389" y="24.3417" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="263.133" outlineWidth="0.3" excludeFromExports="0" uuid="{79e4f196-7fa7-498d-bb00-bbcd38de2d14}" height="166.256" itemRotation="0" frame="false" pagex="17.6389">
+        <ComposerItem pagey="43.7444" page="1" id="" lastValidViewScaleFactor="2.83465" positionMode="0" positionLock="false" x="77.4172" y="43.7444" visibility="1" zValue="1" background="true" transparency="0" frameJoinStyle="miter" blendMode="0" width="219.583" outlineWidth="0.3" excludeFromExports="0" uuid="{79e4f196-7fa7-498d-bb00-bbcd38de2d14}" height="166.256" itemRotation="0" frame="false" pagex="77.4172">
           <FrameColor alpha="255" red="0" blue="0" green="0"/>
           <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
           <customproperties/>
