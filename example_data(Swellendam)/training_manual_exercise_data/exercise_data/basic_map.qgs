@@ -28,10 +28,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.33334399796844139</xmin>
-      <ymin>-34.11065219949109206</ymin>
-      <xmax>20.5724491109435732</xmax>
-      <ymax>-33.96514331255756503</ymax>
+      <xmin>20.42282693299834051</xmin>
+      <ymin>-34.03815254401313695</ymin>
+      <xmax>20.47064200072260576</xmax>
+      <ymax>-34.0090543904996494</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -1684,7 +1684,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/upsidedownLabels" value="0"/>
         <property key="labeling/useSubstitutions" value="false"/>
         <property key="labeling/wrapChar" value=""/>
-        <property key="labeling/xOffset" value="-2.77555756156289e-17"/>
+        <property key="labeling/xOffset" value="0"/>
         <property key="labeling/yOffset" value="0"/>
         <property key="labeling/zIndex" value="0"/>
         <property key="variableNames"/>
@@ -2283,10 +2283,10 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/blendMode" value="0"/>
         <property key="labeling/bufferBlendMode" value="0"/>
         <property key="labeling/bufferColorA" value="255"/>
-        <property key="labeling/bufferColorB" value="255"/>
+        <property key="labeling/bufferColorB" value="193"/>
         <property key="labeling/bufferColorG" value="255"/>
-        <property key="labeling/bufferColorR" value="255"/>
-        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferColorR" value="254"/>
+        <property key="labeling/bufferDraw" value="true"/>
         <property key="labeling/bufferJoinStyle" value="128"/>
         <property key="labeling/bufferNoFill" value="false"/>
         <property key="labeling/bufferSize" value="1"/>
@@ -2300,9 +2300,9 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/dist" value="0"/>
         <property key="labeling/distInMapUnits" value="false"/>
         <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/drawLabels" value="false"/>
-        <property key="labeling/enabled" value="false"/>
-        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/drawLabels" value="true"/>
+        <property key="labeling/enabled" value="true"/>
+        <property key="labeling/fieldName" value="name"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
         <property key="labeling/fontFamily" value=".Helvetica Neue DeskInterface"/>
@@ -2311,7 +2311,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontLimitPixelSize" value="false"/>
         <property key="labeling/fontMaxPixelSize" value="10000"/>
         <property key="labeling/fontMinPixelSize" value="3"/>
-        <property key="labeling/fontSize" value="13"/>
+        <property key="labeling/fontSize" value="10"/>
         <property key="labeling/fontSizeInMapUnits" value="false"/>
         <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/fontStrikeout" value="false"/>
@@ -2319,7 +2319,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/isExpression" value="false"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -2328,8 +2328,8 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/maxCurvedCharAngleIn" value="25"/>
         <property key="labeling/maxCurvedCharAngleOut" value="-25"/>
         <property key="labeling/maxNumLabels" value="2000"/>
-        <property key="labeling/mergeLines" value="false"/>
-        <property key="labeling/minFeatureSize" value="0"/>
+        <property key="labeling/mergeLines" value="true"/>
+        <property key="labeling/minFeatureSize" value="5"/>
         <property key="labeling/multilineAlign" value="4294967295"/>
         <property key="labeling/multilineHeight" value="1"/>
         <property key="labeling/namedStyle" value=""/>
@@ -2338,8 +2338,8 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/obstacleType" value="0"/>
         <property key="labeling/offsetType" value="0"/>
         <property key="labeling/placeDirectionSymbol" value="0"/>
-        <property key="labeling/placement" value="2"/>
-        <property key="labeling/placementFlags" value="10"/>
+        <property key="labeling/placement" value="3"/>
+        <property key="labeling/placementFlags" value="9"/>
         <property key="labeling/plussign" value="false"/>
         <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
         <property key="labeling/preserveRotation" value="true"/>
@@ -2405,9 +2405,9 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/shapeType" value="0"/>
         <property key="labeling/substitutions" value="&lt;substitutions/>"/>
         <property key="labeling/textColorA" value="255"/>
-        <property key="labeling/textColorB" value="0"/>
-        <property key="labeling/textColorG" value="0"/>
-        <property key="labeling/textColorR" value="0"/>
+        <property key="labeling/textColorB" value="102"/>
+        <property key="labeling/textColorG" value="102"/>
+        <property key="labeling/textColorR" value="102"/>
         <property key="labeling/textTransp" value="0"/>
         <property key="labeling/upsidedownLabels" value="0"/>
         <property key="labeling/useSubstitutions" value="false"/>
