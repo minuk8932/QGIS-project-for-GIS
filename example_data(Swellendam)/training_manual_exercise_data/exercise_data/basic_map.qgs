@@ -111,6 +111,15 @@
           <prop k="style" v="solid"/>
         </layer>
       </symbol>
+      <ComposerLabel valign="128" marginX="1" marginY="1" labelText="Swellendam" htmlState="0" halign="4">
+        <LabelFont description="Helvetica,36,-1,5,75,0,0,0,0,0" style="볼드체"/>
+        <FontColor red="0" blue="0" green="0"/>
+        <ComposerItem pagey="14.038" page="1" id="" lastValidViewScaleFactor="-1" positionMode="0" positionLock="false" x="88.119" y="14.038" visibility="1" zValue="3" background="false" transparency="0" frameJoinStyle="miter" blendMode="0" width="122.173" outlineWidth="0.3" excludeFromExports="0" uuid="{6179f92a-9414-4c57-ba84-5e264174c06f}" height="20.607" itemRotation="0" frame="false" pagex="88.119">
+          <FrameColor alpha="255" red="102" blue="102" green="102"/>
+          <BackgroundColor alpha="255" red="255" blue="255" green="255"/>
+          <customproperties/>
+        </ComposerItem>
+      </ComposerLabel>
       <ComposerMap followPreset="false" mapRotation="0" keepLayerSet="false" followPresetName="" id="0" previewMode="Cache" drawCanvasItems="true">
         <Extent ymin="-34.12225998800180804" xmin="20.32746490162356068" ymax="-33.95373705818669663" xmax="20.59418681727425948"/>
         <LayerSet/>
