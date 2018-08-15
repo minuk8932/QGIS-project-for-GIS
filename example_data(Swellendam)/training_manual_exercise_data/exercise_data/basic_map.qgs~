@@ -20,7 +20,7 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="natural_basic_map_20180814140034645" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/natural(basic_map).shp" name="water(basic_map)">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="spatialite" checked="Qt::Checked" id="landuse20180814134412627" source="dbname='/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/landuse.sqlite' table=&quot;landuse&quot; (geometry) sql=" name="landuse">
+    <layer-tree-layer expanded="0" providerKey="spatialite" checked="Qt::Checked" id="landuse20180814134412627" source="dbname='/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/landuse.sqlite' table=&quot;landuse&quot; (geometry) sql=" name="landuse">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -28,10 +28,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.3309399975182572</xmin>
-      <ymin>-34.11000220332084609</ymin>
-      <xmax>20.59758103360978509</xmax>
-      <ymax>-33.96453839743776371</ymax>
+      <xmin>20.30136323822030775</xmin>
+      <ymin>-34.10401471071950397</ymin>
+      <xmax>20.56808515387100655</xmax>
+      <ymax>-33.958506781663651</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -88,8 +88,8 @@
         <legendlayerfile isInOverview="0" layerid="natural_basic_map_20180814140034645" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="landuse" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
+    <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="landuse" showFeatureCount="0">
+      <filegroup open="false" hidden="false">
         <legendlayerfile isInOverview="0" layerid="landuse20180814134412627" visible="1"/>
       </filegroup>
     </legendlayer>
@@ -858,24 +858,24 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="AREA" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
         <ranges>
-          <range render="true" symbol="0" lower="0.000000000000000" upper="7859452.089330079965293" label=" 0 - 7859452"/>
-          <range render="true" symbol="1" lower="7859452.089330079965293" upper="15718904.178660159930587" label=" 7859452 - 15718904"/>
-          <range render="true" symbol="2" lower="15718904.178660159930587" upper="23578356.267990238964558" label=" 15718904 - 23578356"/>
-          <range render="true" symbol="3" lower="23578356.267990238964558" upper="31437808.357320319861174" label=" 23578356 - 31437808"/>
-          <range render="true" symbol="4" lower="31437808.357320319861174" upper="39297260.446650400757790" label=" 31437808 - 39297260"/>
+          <range render="true" symbol="0" lower="0.000000000000000" upper="7859452.089330079965293" label=" 0.0000 - 7859452.0893 "/>
+          <range render="true" symbol="1" lower="7859452.089330079965293" upper="15718904.178660159930587" label=" 7859452.0893 - 15718904.1787 "/>
+          <range render="true" symbol="2" lower="15718904.178660159930587" upper="23578356.267990238964558" label=" 15718904.1787 - 23578356.2680 "/>
+          <range render="true" symbol="3" lower="23578356.267990238964558" upper="31437808.357320319861174" label=" 23578356.2680 - 31437808.3573 "/>
+          <range render="true" symbol="4" lower="31437808.357320319861174" upper="39297260.446650400757790" label=" 31437808.3573 - 39297260.4467 "/>
         </ranges>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="120,249,215,255"/>
+              <prop k="color" v="208,255,241,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
+              <prop k="offset" v="0.26000000000000001,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,0"/>
               <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width" v="0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
             </layer>
@@ -883,14 +883,14 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="1">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="93,251,164,255"/>
+              <prop k="color" v="156,255,180,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
+              <prop k="offset" v="0.26000000000000001,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,0"/>
               <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width" v="0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
             </layer>
@@ -898,14 +898,14 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="2">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="65,252,113,255"/>
+              <prop k="color" v="104,255,120,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
+              <prop k="offset" v="0.26000000000000001,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,0"/>
               <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width" v="0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
             </layer>
@@ -913,14 +913,14 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="3">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="38,254,62,255"/>
+              <prop k="color" v="52,255,60,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
+              <prop k="offset" v="0.26000000000000001,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,0"/>
               <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width" v="0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
             </layer>
@@ -928,14 +928,14 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="4">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="11,255,11,255"/>
+              <prop k="color" v="0,255,0,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
+              <prop k="offset" v="0.26000000000000001,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,0"/>
               <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width" v="0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
             </layer>
@@ -945,29 +945,29 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="44,21,248,255"/>
+              <prop k="color" v="208,255,241,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0,0"/>
+              <prop k="offset" v="0.26000000000000001,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,0"/>
               <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width" v="0"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
             </layer>
           </symbol>
         </source-symbol>
         <colorramp type="gradient" name="[source]">
-          <prop k="color1" v="120,249,215,255"/>
-          <prop k="color2" v="11,255,11,255"/>
+          <prop k="color1" v="208,255,241,255"/>
+          <prop k="color2" v="0,255,0,255"/>
           <prop k="discrete" v="0"/>
         </colorramp>
         <invertedcolorramp value="0"/>
         <mode name="equal"/>
         <rotation/>
         <sizescale scalemethod="diameter"/>
-        <labelformat format=" %1 - %2" trimtrailingzeroes="false" decimalplaces="0"/>
+        <labelformat format=" %1 - %2 " trimtrailingzeroes="false" decimalplaces="0"/>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
@@ -1113,7 +1113,7 @@ def my_form_open(dialog, layer, feature):
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
-      <blendMode>1</blendMode>
+      <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
       <displayfield>name</displayfield>
