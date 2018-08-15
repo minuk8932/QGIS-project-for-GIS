@@ -28,10 +28,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.30136323822030775</xmin>
-      <ymin>-34.10401471071950397</ymin>
-      <xmax>20.56808515387100655</xmax>
-      <ymax>-33.958506781663651</ymax>
+      <xmin>20.32746490162356068</xmin>
+      <ymin>-34.11385632151088743</ymin>
+      <xmax>20.59418681727425948</xmax>
+      <ymax>-33.96834839245503446</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -856,14 +856,17 @@ def my_form_open(dialog, layer, feature):
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <renderer-v2 attr="AREA" forceraster="0" symbollevels="0" type="graduatedSymbol" graduatedMethod="GraduatedColor" enableorderby="0">
-        <ranges>
-          <range render="true" symbol="0" lower="0.000000000000000" upper="7859452.089330079965293" label=" 0.0000 - 7859452.0893 "/>
-          <range render="true" symbol="1" lower="7859452.089330079965293" upper="15718904.178660159930587" label=" 7859452.0893 - 15718904.1787 "/>
-          <range render="true" symbol="2" lower="15718904.178660159930587" upper="23578356.267990238964558" label=" 15718904.1787 - 23578356.2680 "/>
-          <range render="true" symbol="3" lower="23578356.267990238964558" upper="31437808.357320319861174" label=" 23578356.2680 - 31437808.3573 "/>
-          <range render="true" symbol="4" lower="31437808.357320319861174" upper="39297260.446650400757790" label=" 31437808.3573 - 39297260.4467 "/>
-        </ranges>
+      <renderer-v2 forceraster="0" symbollevels="0" type="RuleRenderer" enableorderby="0">
+        <rules key="{c004aebf-aabc-4788-a448-cd18aee37c58}">
+          <rule filter="&quot;&quot; >= 0.000000 AND &quot;&quot; &lt;= 7859452.089330" key="{0c044ce8-8d4d-4cfe-ba28-2cdad4e8a840}" symbol="0" label=" 0.0000 - 7859452.0893 "/>
+          <rule filter="&quot;&quot; > 7859452.089330 AND &quot;&quot; &lt;= 15718904.178660" key="{a2ca902a-9d4f-43fd-a27e-e6cc714dfc0f}" symbol="1" label=" 7859452.0893 - 15718904.1787 "/>
+          <rule filter="&quot;&quot; > 15718904.178660 AND &quot;&quot; &lt;= 23578356.267990" key="{62a66d5f-ae45-4269-b33e-71b1e834d88d}" symbol="2" label=" 15718904.1787 - 23578356.2680 "/>
+          <rule filter="&quot;&quot; > 23578356.267990 AND &quot;&quot; &lt;= 31437808.357320" key="{78492adc-5ea8-4f02-a17b-2838b1a7b181}" symbol="3" label=" 23578356.2680 - 31437808.3573 "/>
+          <rule filter="&quot;&quot; > 31437808.357320 AND &quot;&quot; &lt;= 39297260.446650" key="{3dd66639-b854-4b44-a00f-4def1132703f}" symbol="4" label=" 31437808.3573 - 39297260.4467 "/>
+          <rule filter="&quot;name&quot; = 'Swellendam'&#xa;" key="{5d1596e2-b4ed-46b8-bbbf-39deedb1ec44}" symbol="5"/>
+          <rule filter="&quot;landuse&quot; = 'residential' AND &quot;name&quot; != 'Swellendam'&#xa;" key="{ac6e8e22-1fa8-4317-9bb2-54c3daa19811}" symbol="6"/>
+          <rule filter="&quot;landuse&quot; != 'residential' AND  &quot;AREA&quot;  >= 0.00005&#xa;" key="{d8838296-35d1-4af0-9fe1-23c3d962628f}" symbol="7"/>
+        </rules>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
@@ -940,34 +943,52 @@ def my_form_open(dialog, layer, feature):
               <prop k="style" v="solid"/>
             </layer>
           </symbol>
-        </symbols>
-        <source-symbol>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="5">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="208,255,241,255"/>
+              <prop k="color" v="105,230,252,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="offset" v="0.26000000000000001,0"/>
+              <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,0"/>
               <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
+              <prop k="outline_width" v="0.26"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
             </layer>
           </symbol>
-        </source-symbol>
-        <colorramp type="gradient" name="[source]">
-          <prop k="color1" v="208,255,241,255"/>
-          <prop k="color2" v="0,255,0,255"/>
-          <prop k="discrete" v="0"/>
-        </colorramp>
-        <invertedcolorramp value="0"/>
-        <mode name="equal"/>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-        <labelformat format=" %1 - %2 " trimtrailingzeroes="false" decimalplaces="0"/>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="6">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="118,247,215,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="7">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="27,162,7,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,0"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
