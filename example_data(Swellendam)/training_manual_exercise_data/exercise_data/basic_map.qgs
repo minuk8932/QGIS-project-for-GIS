@@ -28,10 +28,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.29003642363390725</xmin>
-      <ymin>-34.13429200655475881</ymin>
-      <xmax>20.60872141971451299</xmax>
-      <ymax>-33.94035429236238599</ymax>
+      <xmin>20.33334399796844139</xmin>
+      <ymin>-34.11065219949109206</ymin>
+      <xmax>20.5724491109435732</xmax>
+      <ymax>-33.96514331255756503</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -1532,11 +1532,11 @@ def my_form_open(dialog, layer, feature):
               <prop k="size" v="2"/>
               <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="size_unit" v="MM"/>
-              <prop k="symbol_height" v="3"/>
+              <prop k="symbol_height" v="0"/>
               <prop k="symbol_height_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="symbol_height_unit" v="MM"/>
               <prop k="symbol_name" v="circle"/>
-              <prop k="symbol_width" v="3"/>
+              <prop k="symbol_width" v="0"/>
               <prop k="symbol_width_map_unit_scale" v="0,0,0,0,0,0"/>
               <prop k="symbol_width_unit" v="MM"/>
               <prop k="vertical_anchor_point" v="1"/>
@@ -1558,7 +1558,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/bufferColorB" value="255"/>
         <property key="labeling/bufferColorG" value="255"/>
         <property key="labeling/bufferColorR" value="255"/>
-        <property key="labeling/bufferDraw" value="false"/>
+        <property key="labeling/bufferDraw" value="true"/>
         <property key="labeling/bufferJoinStyle" value="128"/>
         <property key="labeling/bufferNoFill" value="false"/>
         <property key="labeling/bufferSize" value="1"/>
@@ -1569,15 +1569,15 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/centroidWhole" value="false"/>
         <property key="labeling/decimals" value="3"/>
         <property key="labeling/displayAll" value="false"/>
-        <property key="labeling/dist" value="0"/>
+        <property key="labeling/dist" value="2"/>
         <property key="labeling/distInMapUnits" value="false"/>
         <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/drawLabels" value="false"/>
-        <property key="labeling/enabled" value="false"/>
-        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/drawLabels" value="true"/>
+        <property key="labeling/enabled" value="true"/>
+        <property key="labeling/fieldName" value="name"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value=".Helvetica Neue DeskInterface"/>
+        <property key="labeling/fontFamily" value="Malayalam MN"/>
         <property key="labeling/fontItalic" value="false"/>
         <property key="labeling/fontLetterSpacing" value="0"/>
         <property key="labeling/fontLimitPixelSize" value="false"/>
@@ -1591,7 +1591,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/fontWeight" value="50"/>
         <property key="labeling/fontWordSpacing" value="0"/>
         <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="true"/>
+        <property key="labeling/isExpression" value="false"/>
         <property key="labeling/labelOffsetInMapUnits" value="true"/>
         <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
         <property key="labeling/labelPerPart" value="false"/>
@@ -1604,13 +1604,13 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/minFeatureSize" value="0"/>
         <property key="labeling/multilineAlign" value="3"/>
         <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value=""/>
+        <property key="labeling/namedStyle" value="일반체"/>
         <property key="labeling/obstacle" value="true"/>
         <property key="labeling/obstacleFactor" value="1"/>
         <property key="labeling/obstacleType" value="0"/>
         <property key="labeling/offsetType" value="0"/>
         <property key="labeling/placeDirectionSymbol" value="0"/>
-        <property key="labeling/placement" value="6"/>
+        <property key="labeling/placement" value="1"/>
         <property key="labeling/placementFlags" value="10"/>
         <property key="labeling/plussign" value="false"/>
         <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
@@ -1684,7 +1684,7 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/upsidedownLabels" value="0"/>
         <property key="labeling/useSubstitutions" value="false"/>
         <property key="labeling/wrapChar" value=""/>
-        <property key="labeling/xOffset" value="0"/>
+        <property key="labeling/xOffset" value="-2.77555756156289e-17"/>
         <property key="labeling/yOffset" value="0"/>
         <property key="labeling/zIndex" value="0"/>
         <property key="variableNames"/>
