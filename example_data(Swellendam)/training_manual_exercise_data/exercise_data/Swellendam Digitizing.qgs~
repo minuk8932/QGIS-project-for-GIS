@@ -39,10 +39,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.39555356369399419</xmin>
-      <ymin>-34.103831351173028</ymin>
-      <xmax>20.53919465514233167</xmax>
-      <ymax>-34.0164176816178383</ymax>
+      <xmin>20.34907591430065921</xmin>
+      <ymin>-34.08530284846436587</ymin>
+      <xmax>20.6025048776088191</xmax>
+      <ymax>-33.9515356127293586</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -1714,7 +1714,17 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
+        <columns>
+          <column width="-1" hidden="0" type="field" name="osm_id"/>
+          <column width="-1" hidden="0" type="field" name="name"/>
+          <column width="-1" hidden="0" type="field" name="highway"/>
+          <column width="-1" hidden="0" type="field" name="waterway"/>
+          <column width="-1" hidden="0" type="field" name="aerialway"/>
+          <column width="-1" hidden="0" type="field" name="barrier"/>
+          <column width="-1" hidden="0" type="field" name="man_made"/>
+          <column width="-1" hidden="0" type="field" name="other_tags"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
       </attributetableconfig>
       <editform>.</editform>
       <editforminit/>
@@ -1738,7 +1748,7 @@ def my_form_open(dialog, layer, feature):
         <default field="man_made" expression=""/>
         <default field="other_tags" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>routes20180816155850671</id>
