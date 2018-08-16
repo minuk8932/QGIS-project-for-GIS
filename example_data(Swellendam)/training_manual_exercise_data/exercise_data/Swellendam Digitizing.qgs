@@ -39,10 +39,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.40937997891361988</xmin>
-      <ymin>-34.1021414559795204</ymin>
-      <xmax>20.55302107036195736</xmax>
-      <ymax>-34.0147277864243307</ymax>
+      <xmin>20.39555356369399419</xmin>
+      <ymin>-34.103831351173028</ymin>
+      <xmax>20.53919465514233167</xmax>
+      <ymax>-34.0164176816178383</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -1075,7 +1075,7 @@ def my_form_open(dialog, layer, feature):
         <default field="orig_ogc_f" expression=""/>
         <default field="AREA" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>place_basic_map_20180816170713158</id>
@@ -2825,7 +2825,7 @@ def my_form_open(dialog, layer, feature):
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
-        <value>disabled</value>
+        <value>enabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -2834,7 +2834,9 @@ def my_form_open(dialog, layer, feature):
         <value>disabled</value>
       </LayerSnappingEnabledList>
       <SnappingMode type="QString">advanced</SnappingMode>
-      <AvoidIntersectionsList type="QStringList"/>
+      <AvoidIntersectionsList type="QStringList">
+        <value>landuse_basic_map_20180816172456851</value>
+      </AvoidIntersectionsList>
       <LayerSnappingToleranceUnitList type="QStringList">
         <value>2</value>
         <value>2</value>
