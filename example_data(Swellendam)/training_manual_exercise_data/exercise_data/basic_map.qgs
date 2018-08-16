@@ -31,10 +31,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>154665.78583628393243998</xmin>
-      <ymin>1461.49400589395031602</ymin>
-      <xmax>154665.98165894014528021</xmax>
-      <ymax>1461.60083532000157902</ymax>
+      <xmin>20.36321825884007097</xmin>
+      <ymin>-34.08996813710457729</ymin>
+      <xmax>20.54660831884007166</xmax>
+      <ymax>-33.9724965521045732</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -250,6 +250,12 @@
   </Composer>
   <projectlayers>
     <maplayer simplifyAlgorithm="0" minimumScale="10000" maximumScale="1e+06" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="1" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.36054839999999899</xmin>
+        <ymin>-34.07646100000000189</ymin>
+        <xmax>20.52746319999999969</xmax>
+        <ymax>-34.00207429999999675</ymax>
+      </extent>
       <id>building_basic_map_20180814135459027</id>
       <datasource>./epsg4326/building(basic_map).shp</datasource>
       <keywordList>
@@ -1476,6 +1482,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.37114910000000023</xmin>
+        <ymin>-34.0869175999999996</ymin>
+        <xmax>20.52774989999999988</xmax>
+        <ymax>-33.97866059999999777</ymax>
+      </extent>
       <id>landuse_basic_map_20180816171437114</id>
       <datasource>./epsg4326/landuse(basic_map).shp|layerid=0|subset="landuse" != 'NULL'
 </datasource>
@@ -1784,6 +1796,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -1809,7 +1822,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="ogc_fid" index="0" name=""/>
         <alias field="osm_id" index="1" name=""/>
@@ -1844,7 +1857,7 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="-1114135132">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="ogc_fid"/>
           <column width="-1" hidden="0" type="field" name="osm_id"/>
@@ -1878,10 +1891,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -1940,6 +1953,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.42480709999999888</xmin>
+        <ymin>-34.04344919999999775</ymin>
+        <xmax>20.52628659999999883</xmax>
+        <ymax>-33.99609490000000278</ymax>
+      </extent>
       <id>natural_basic_map_20180814140034645</id>
       <datasource>./natural(basic_map).shp</datasource>
       <keywordList>
@@ -2386,6 +2405,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.43060410000000005</xmin>
+        <ymin>-34.0759381000000019</ymin>
+        <xmax>20.52499999999999858</xmax>
+        <ymax>-34.02111099999999766</ymax>
+      </extent>
       <id>place_basic_map_20180814140431366</id>
       <datasource>./epsg4326/place(basic_map).shp</datasource>
       <keywordList>
@@ -2755,6 +2780,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.3531329999999997</xmin>
+        <ymin>-34.08758410000000083</ymin>
+        <xmax>20.52779019999999832</xmax>
+        <ymax>-33.97580860000000058</ymax>
+      </extent>
       <id>river_basic_map_20180814135815883</id>
       <datasource>./epsg4326/river(basic_map).shp</datasource>
       <keywordList>
