@@ -8,9 +8,6 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="building_basic_map_20180816170713218" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/building(basic_map).shp" name="building(basic_map)">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="osm_data_multipolygons_landuse_20180816170713174" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/osm_data_multipolygons(landuse).shp|layerid=0|subset=&quot;landuse&quot; != 'NULL'" name="osm_data_multipolygons(landuse)">
-      <customproperties/>
-    </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="place_basic_map_20180816170713158" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/place(basic_map).shp" name="place(basic_map)">
       <customproperties/>
     </layer-tree-layer>
@@ -29,6 +26,9 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="routes20180816155850671" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/routes.shp" name="routes">
       <customproperties/>
     </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="landuse_basic_map_20180816172456851" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/epsg4326/landuse(basic_map).shp|layerid=0" name="landuse(basic_map)">
+      <customproperties/>
+    </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3420C_2010_327_RGB_LATLNG20180816154140863" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/raster/3420C_2010_327_RGB_LATLNG.tif" name="3420C_2010_327_RGB_LATLNG">
       <customproperties>
         <property key="overview" value="0"/>
@@ -39,10 +39,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.3853663859025076</xmin>
-      <ymin>-34.07710045955762013</ymin>
-      <xmax>20.52879009755629625</xmax>
-      <ymax>-33.98981907781323031</ymax>
+      <xmin>20.5031230741026036</xmin>
+      <ymin>-34.02108793742541337</ymin>
+      <xmax>20.5318512923922043</xmax>
+      <ymax>-34.00360520351441806</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -72,19 +72,14 @@
       <item>roads20180816170713124</item>
       <item>river_basic_map_20180816170713136</item>
       <item>place_basic_map_20180816170713158</item>
-      <item>osm_data_multipolygons_landuse_20180816170713174</item>
       <item>building_basic_map_20180816170713218</item>
+      <item>landuse_basic_map_20180816172456851</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="building(basic_map)" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="building_basic_map_20180816170713218" visible="1"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="osm_data_multipolygons(landuse)" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="osm_data_multipolygons_landuse_20180816170713174" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="place(basic_map)" showFeatureCount="0">
@@ -115,6 +110,11 @@
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="routes" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="routes20180816155850671" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="landuse(basic_map)" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="landuse_basic_map_20180816172456851" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3420C_2010_327_RGB_LATLNG" showFeatureCount="0">
@@ -472,6 +472,7 @@
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -497,7 +498,7 @@
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="osm_id" index="0" name=""/>
         <alias field="osm_way_id" index="1" name=""/>
@@ -529,7 +530,7 @@
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="1825189302">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="osm_id"/>
           <column width="-1" hidden="0" type="field" name="osm_way_id"/>
@@ -560,10 +561,10 @@
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -619,12 +620,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>osm_data_multipolygons_landuse_20180816170713174</id>
-      <datasource>./epsg4326/osm_data_multipolygons(landuse).shp|layerid=0|subset="landuse" != 'NULL'</datasource>
+      <id>landuse_basic_map_20180816172456851</id>
+      <datasource>./epsg4326/landuse(basic_map).shp|layerid=0</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>osm_data_multipolygons(landuse)</layername>
+      <layername>landuse(basic_map)</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -645,6 +646,9 @@ def my_form_open(dialog, layer, feature):
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
+        <edittype widgetv2type="TextEdit" name="ogc_fid">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
         <edittype widgetv2type="TextEdit" name="osm_id">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
@@ -723,7 +727,7 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="orig_ogc_f">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="orig_ogc_fid">
+        <edittype widgetv2type="TextEdit" name="AREA">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
@@ -732,7 +736,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="70,207,109,255"/>
+              <prop k="color" v="77,244,130,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -947,39 +951,41 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform></annotationform>
       <aliases>
-        <alias field="osm_id" index="0" name=""/>
-        <alias field="osm_way_id" index="1" name=""/>
-        <alias field="name" index="2" name=""/>
-        <alias field="type" index="3" name=""/>
-        <alias field="aeroway" index="4" name=""/>
-        <alias field="amenity" index="5" name=""/>
-        <alias field="admin_leve" index="6" name=""/>
-        <alias field="barrier" index="7" name=""/>
-        <alias field="boundary" index="8" name=""/>
-        <alias field="building" index="9" name=""/>
-        <alias field="craft" index="10" name=""/>
-        <alias field="geological" index="11" name=""/>
-        <alias field="historic" index="12" name=""/>
-        <alias field="land_area" index="13" name=""/>
-        <alias field="landuse" index="14" name=""/>
-        <alias field="leisure" index="15" name=""/>
-        <alias field="man_made" index="16" name=""/>
-        <alias field="military" index="17" name=""/>
-        <alias field="natural" index="18" name=""/>
-        <alias field="office" index="19" name=""/>
-        <alias field="place" index="20" name=""/>
-        <alias field="shop" index="21" name=""/>
-        <alias field="sport" index="22" name=""/>
-        <alias field="tourism" index="23" name=""/>
-        <alias field="other_tags" index="24" name=""/>
-        <alias field="orig_ogc_f" index="25" name=""/>
-        <alias field="orig_ogc_fid" index="26" name=""/>
+        <alias field="ogc_fid" index="0" name=""/>
+        <alias field="osm_id" index="1" name=""/>
+        <alias field="osm_way_id" index="2" name=""/>
+        <alias field="name" index="3" name=""/>
+        <alias field="type" index="4" name=""/>
+        <alias field="aeroway" index="5" name=""/>
+        <alias field="amenity" index="6" name=""/>
+        <alias field="admin_leve" index="7" name=""/>
+        <alias field="barrier" index="8" name=""/>
+        <alias field="boundary" index="9" name=""/>
+        <alias field="building" index="10" name=""/>
+        <alias field="craft" index="11" name=""/>
+        <alias field="geological" index="12" name=""/>
+        <alias field="historic" index="13" name=""/>
+        <alias field="land_area" index="14" name=""/>
+        <alias field="landuse" index="15" name=""/>
+        <alias field="leisure" index="16" name=""/>
+        <alias field="man_made" index="17" name=""/>
+        <alias field="military" index="18" name=""/>
+        <alias field="natural" index="19" name=""/>
+        <alias field="office" index="20" name=""/>
+        <alias field="place" index="21" name=""/>
+        <alias field="shop" index="22" name=""/>
+        <alias field="sport" index="23" name=""/>
+        <alias field="tourism" index="24" name=""/>
+        <alias field="other_tags" index="25" name=""/>
+        <alias field="orig_ogc_f" index="26" name=""/>
+        <alias field="AREA" index="27" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="3407928">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="-1982242032">
         <columns>
+          <column width="-1" hidden="0" type="field" name="ogc_fid"/>
           <column width="-1" hidden="0" type="field" name="osm_id"/>
           <column width="-1" hidden="0" type="field" name="osm_way_id"/>
           <column width="-1" hidden="0" type="field" name="name"/>
@@ -1006,7 +1012,7 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="tourism"/>
           <column width="-1" hidden="0" type="field" name="other_tags"/>
           <column width="-1" hidden="0" type="field" name="orig_ogc_f"/>
-          <column width="-1" hidden="0" type="field" name="orig_ogc_fid"/>
+          <column width="-1" hidden="0" type="field" name="AREA"/>
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
@@ -1039,6 +1045,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
       <defaults>
+        <default field="ogc_fid" expression=""/>
         <default field="osm_id" expression=""/>
         <default field="osm_way_id" expression=""/>
         <default field="name" expression=""/>
@@ -1065,7 +1072,7 @@ def my_form_open(dialog, layer, feature):
         <default field="tourism" expression=""/>
         <default field="other_tags" expression=""/>
         <default field="orig_ogc_f" expression=""/>
-        <default field="orig_ogc_fid" expression=""/>
+        <default field="AREA" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
@@ -1330,6 +1337,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -1355,7 +1363,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="osm_id" index="0" name=""/>
         <alias field="name" index="1" name=""/>
@@ -1372,7 +1380,7 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="7143541">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="osm_id"/>
           <column width="-1" hidden="0" type="field" name="name"/>
@@ -1388,10 +1396,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -1541,7 +1549,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="osm_id" index="0" name=""/>
         <alias field="name" index="1" name=""/>
@@ -1557,13 +1565,13 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="29751440">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1690,7 +1698,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="osm_id" index="0" name=""/>
         <alias field="name" index="1" name=""/>
@@ -1707,10 +1715,10 @@ def my_form_open(dialog, layer, feature):
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -1962,6 +1970,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -1987,7 +1996,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="2" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="type" index="1" name=""/>
@@ -1995,17 +2004,17 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="-66692096">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="type"/>
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -2263,6 +2272,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -2288,7 +2298,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="name" index="1" name=""/>
@@ -2303,10 +2313,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -2633,6 +2643,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -2658,7 +2669,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="osm_id" index="0" name=""/>
         <alias field="osm_way_id" index="1" name=""/>
@@ -2689,7 +2700,7 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="6357092">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="osm_id"/>
           <column width="-1" hidden="0" type="field" name="osm_way_id"/>
@@ -2719,10 +2730,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -2802,14 +2813,14 @@ def my_form_open(dialog, layer, feature):
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
-        <value>school_property20180816154117049</value>
-        <value>routes20180816155850671</value>
-        <value>water20180816170713065</value>
-        <value>roads20180816170713124</value>
-        <value>river_basic_map_20180816170713136</value>
-        <value>place_basic_map_20180816170713158</value>
-        <value>osm_data_multipolygons_landuse_20180816170713174</value>
         <value>building_basic_map_20180816170713218</value>
+        <value>place_basic_map_20180816170713158</value>
+        <value>river_basic_map_20180816170713136</value>
+        <value>roads20180816170713124</value>
+        <value>routes20180816155850671</value>
+        <value>school_property20180816154117049</value>
+        <value>water20180816170713065</value>
+        <value>landuse_basic_map_20180816172456851</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
@@ -2818,20 +2829,20 @@ def my_form_open(dialog, layer, feature):
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
-        <value>enabled</value>
         <value>disabled</value>
+        <value>enabled</value>
       </LayerSnappingEnabledList>
       <SnappingMode type="QString">advanced</SnappingMode>
       <AvoidIntersectionsList type="QStringList">
-        <value>osm_data_multipolygons_landuse_20180816170713174</value>
+        <value>landuse_basic_map_20180816172456851</value>
       </AvoidIntersectionsList>
       <LayerSnappingToleranceUnitList type="QStringList">
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
         <value>1</value>
-        <value>2</value>
-        <value>2</value>
-        <value>2</value>
-        <value>2</value>
-        <value>2</value>
         <value>2</value>
         <value>2</value>
       </LayerSnappingToleranceUnitList>
@@ -2847,6 +2858,7 @@ def my_form_open(dialog, layer, feature):
       </LayerSnapToList>
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
+      <TopologicalEditing type="bool">true</TopologicalEditing>
       <LayerSnappingToleranceList type="QStringList">
         <value>0.000000</value>
         <value>0.000000</value>
@@ -2855,7 +2867,7 @@ def my_form_open(dialog, layer, feature):
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
-        <value>0.000000</value>
+        <value>4.000000</value>
       </LayerSnappingToleranceList>
     </Digitizing>
     <PositionPrecision>
