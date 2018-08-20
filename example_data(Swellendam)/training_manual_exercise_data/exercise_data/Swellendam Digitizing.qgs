@@ -42,10 +42,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.4023998079811939</xmin>
-      <ymin>-34.08677237802007909</ymin>
-      <xmax>20.55625230507996903</xmax>
-      <ymax>-33.99949214786135343</ymax>
+      <xmin>20.42653992436296306</xmin>
+      <ymin>-34.03119840655131867</ymin>
+      <xmax>20.46500304863765507</xmax>
+      <ymax>-34.00900214112301256</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -2285,6 +2285,9 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="name">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="FileName" name="image">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
@@ -2509,6 +2512,7 @@ def my_form_open(dialog, layer, feature):
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="name" index="1" name=""/>
+        <alias field="image" index="2" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -2518,6 +2522,7 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="name"/>
           <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="image"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -2551,8 +2556,9 @@ def my_form_open(dialog, layer, feature):
       <defaults>
         <default field="id" expression=""/>
         <default field="name" expression=""/>
+        <default field="image" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>test_data20180820151520427</id>
