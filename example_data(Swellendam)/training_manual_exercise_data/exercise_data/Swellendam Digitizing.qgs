@@ -42,10 +42,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.38371088018196176</xmin>
-      <ymin>-34.06920208272059369</ymin>
-      <xmax>20.51564959360910123</xmax>
-      <ymax>-33.99645680370892364</ymax>
+      <xmin>20.38358303259132853</xmin>
+      <ymin>-34.06229831283201293</ymin>
+      <xmax>20.51552174601867407</xmax>
+      <ymax>-33.98955303382022919</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -992,7 +992,9 @@ def my_form_open(dialog, layer, feature):
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
+      <attributeactions default="0">
+        <actionsetting showInAttributeTable="1" action="open http://www.google.com/search?q=[%&quot;name&quot;%]" icon="" capture="0" type="0" name="Google Search" shortTitle=""/>
+      </attributeactions>
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="ogc_fid"/>
