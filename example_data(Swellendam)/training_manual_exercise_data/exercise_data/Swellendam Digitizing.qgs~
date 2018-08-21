@@ -42,10 +42,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.4023998079811939</xmin>
-      <ymin>-34.08677237802007909</ymin>
-      <xmax>20.55625230507996903</xmax>
-      <ymax>-33.99949214786135343</ymax>
+      <xmin>20.42615628023797925</xmin>
+      <ymin>-34.03817773408527358</ymin>
+      <xmax>20.47013585138035907</xmax>
+      <ymax>-34.01392930774805023</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -2253,6 +2253,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.44259877509097123</xmin>
+        <ymin>-34.02701129669233637</ymin>
+        <xmax>20.44950357546068176</xmax>
+        <ymax>-34.01996840031523561</ymax>
+      </extent>
       <id>school_property20180816154117049</id>
       <datasource>./school_property.shp</datasource>
       <keywordList>
@@ -2284,6 +2290,9 @@ def my_form_open(dialog, layer, feature):
         </edittype>
         <edittype widgetv2type="TextEdit" name="name">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="FileName" name="image">
+          <widgetv2config fieldEditable="1" constraint="" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
@@ -2509,6 +2518,7 @@ def my_form_open(dialog, layer, feature):
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="name" index="1" name=""/>
+        <alias field="image" index="2" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -2518,6 +2528,7 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="name"/>
           <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="image"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -2551,8 +2562,9 @@ def my_form_open(dialog, layer, feature):
       <defaults>
         <default field="id" expression=""/>
         <default field="name" expression=""/>
+        <default field="image" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>test_data20180820151520427</id>
@@ -2788,6 +2800,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description=".Helvetica Neue DeskInterface,13,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -2813,7 +2826,7 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="name" index="0" name=""/>
         <alias field="age" index="1" name=""/>
@@ -2831,7 +2844,7 @@ def my_form_open(dialog, layer, feature):
       <editform>./forms/add_people.ui</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
