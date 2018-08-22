@@ -5,7 +5,10 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="houses_restuarants_500m20180822165503432" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/houses_restuarants_500m.shp" name="houses_restuarants_500m">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="solution20180822173305059" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/solution.shp" name="solution">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="houses_restuarants_500m20180822165503432" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/houses_restuarants_500m.shp|layerid=0|subset=&quot;AREA&quot; >= 100" name="houses_restuarants_500m">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="well_located_houses20180822165004555" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/well_located_houses.shp" name="well_located_houses">
@@ -31,10 +34,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>447109.58563144120853394</xmin>
-      <ymin>6233923.3019147701561451</ymin>
-      <xmax>451461.981469213264063</xmax>
-      <ymax>6236432.43386177346110344</ymax>
+      <xmin>444329.25576749461470172</xmin>
+      <ymin>6232417.38177434541285038</ymin>
+      <xmax>453034.04744303872575983</xmax>
+      <ymax>6237435.64566835202276707</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -52,6 +55,7 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
+      <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:32734" srcDatumTransform="-1" destDatumTransform="-1" layerid="solution20180822173305059"/>
       <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:32734" srcDatumTransform="-1" destDatumTransform="-1" layerid="schools_34S20180822155036305"/>
       <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:32734" srcDatumTransform="-1" destDatumTransform="-1" layerid="houses_34S20180822154922237"/>
       <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:32734" srcDatumTransform="-1" destDatumTransform="-1" layerid="버퍼20180822161758154"/>
@@ -88,9 +92,15 @@
       <item>Intersection20180822162356925</item>
       <item>well_located_houses20180822165004555</item>
       <item>houses_restuarants_500m20180822165503432</item>
+      <item>solution20180822173305059</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="solution" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="solution20180822173305059" visible="1"/>
+      </filegroup>
+    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="houses_restuarants_500m" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="houses_restuarants_500m20180822165503432" visible="1"/>
@@ -641,8 +651,14 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>447428.23514471400994807</xmin>
+        <ymin>6234230.36249956302344799</ymin>
+        <xmax>449722.79683401575312018</xmax>
+        <ymax>6236095.25242456421256065</ymax>
+      </extent>
       <id>houses_restuarants_500m20180822165503432</id>
-      <datasource>./houses_restuarants_500m.shp</datasource>
+      <datasource>./houses_restuarants_500m.shp|layerid=0|subset="AREA" >= 100</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -743,6 +759,12 @@ def my_form_open(dialog, layer, feature):
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="orig_ogc_f">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AREA">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="orig_ogc_fid">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
@@ -992,6 +1014,8 @@ def my_form_open(dialog, layer, feature):
         <alias field="tourism" index="23" name=""/>
         <alias field="other_tags" index="24" name=""/>
         <alias field="orig_ogc_f" index="25" name=""/>
+        <alias field="AREA" index="26" name=""/>
+        <alias field="orig_ogc_fid" index="27" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -1025,6 +1049,8 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="other_tags"/>
           <column width="-1" hidden="0" type="field" name="orig_ogc_f"/>
           <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="AREA"/>
+          <column width="-1" hidden="0" type="field" name="orig_ogc_fid"/>
         </columns>
       </attributetableconfig>
       <editform></editform>
@@ -1082,8 +1108,10 @@ def my_form_open(dialog, layer, feature):
         <default field="tourism" expression=""/>
         <default field="other_tags" expression=""/>
         <default field="orig_ogc_f" expression=""/>
+        <default field="AREA" expression=""/>
+        <default field="orig_ogc_fid" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
@@ -2169,6 +2197,247 @@ def my_form_open(dialog, layer, feature):
         <default field="tourism" expression=""/>
         <default field="other_tags" expression=""/>
         <default field="orig_ogc_f" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>solution20180822173305059</id>
+      <datasource>./solution.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>solution</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>3184</srsid>
+          <srid>32734</srid>
+          <authid>EPSG:32734</authid>
+          <description>WGS 84 / UTM zone 34S</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="System">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="osm_id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="osm_way_id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="type">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="aeroway">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="amenity">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="admin_leve">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="barrier">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="boundary">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="building">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="craft">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="geological">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="historic">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="land_area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="landuse">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="leisure">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="man_made">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="military">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="natural">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="office">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="place">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="shop">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="sport">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="tourism">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="other_tags">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="orig_ogc_f">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AREA">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="orig_ogc_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="243,41,162,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="라벨"/>
+        <family fieldname="" name=".Helvetica Neue DeskInterface"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <annotationform></annotationform>
+      <aliases>
+        <alias field="osm_id" index="0" name=""/>
+        <alias field="osm_way_id" index="1" name=""/>
+        <alias field="name" index="2" name=""/>
+        <alias field="type" index="3" name=""/>
+        <alias field="aeroway" index="4" name=""/>
+        <alias field="amenity" index="5" name=""/>
+        <alias field="admin_leve" index="6" name=""/>
+        <alias field="barrier" index="7" name=""/>
+        <alias field="boundary" index="8" name=""/>
+        <alias field="building" index="9" name=""/>
+        <alias field="craft" index="10" name=""/>
+        <alias field="geological" index="11" name=""/>
+        <alias field="historic" index="12" name=""/>
+        <alias field="land_area" index="13" name=""/>
+        <alias field="landuse" index="14" name=""/>
+        <alias field="leisure" index="15" name=""/>
+        <alias field="man_made" index="16" name=""/>
+        <alias field="military" index="17" name=""/>
+        <alias field="natural" index="18" name=""/>
+        <alias field="office" index="19" name=""/>
+        <alias field="place" index="20" name=""/>
+        <alias field="shop" index="21" name=""/>
+        <alias field="sport" index="22" name=""/>
+        <alias field="tourism" index="23" name=""/>
+        <alias field="other_tags" index="24" name=""/>
+        <alias field="orig_ogc_f" index="25" name=""/>
+        <alias field="AREA" index="26" name=""/>
+        <alias field="orig_ogc_1" index="27" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="osm_id" expression=""/>
+        <default field="osm_way_id" expression=""/>
+        <default field="name" expression=""/>
+        <default field="type" expression=""/>
+        <default field="aeroway" expression=""/>
+        <default field="amenity" expression=""/>
+        <default field="admin_leve" expression=""/>
+        <default field="barrier" expression=""/>
+        <default field="boundary" expression=""/>
+        <default field="building" expression=""/>
+        <default field="craft" expression=""/>
+        <default field="geological" expression=""/>
+        <default field="historic" expression=""/>
+        <default field="land_area" expression=""/>
+        <default field="landuse" expression=""/>
+        <default field="leisure" expression=""/>
+        <default field="man_made" expression=""/>
+        <default field="military" expression=""/>
+        <default field="natural" expression=""/>
+        <default field="office" expression=""/>
+        <default field="place" expression=""/>
+        <default field="shop" expression=""/>
+        <default field="sport" expression=""/>
+        <default field="tourism" expression=""/>
+        <default field="other_tags" expression=""/>
+        <default field="orig_ogc_f" expression=""/>
+        <default field="AREA" expression=""/>
+        <default field="orig_ogc_1" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
