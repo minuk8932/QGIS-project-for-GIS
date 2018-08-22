@@ -5,9 +5,6 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Intersection20180822162356925" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/residential_development/schools_roads_intersect.shp" name="schools_roads_intersect">
-      <customproperties/>
-    </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="버퍼20180822161922203" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/residential_development/roads_buffer_50m.shp" name="roads_buffer_50m">
       <customproperties/>
     </layer-tree-layer>
@@ -15,6 +12,9 @@
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="houses_34S20180822154922237" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/houses_34S.shp" name="houses_34S">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="residentials_34S20180822155105696" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/residentials_34S.shp" name="residentials_34S">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="restuarants_34S20180822154942375" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/restuarants_34S.shp" name="restuarants_34S">
@@ -26,7 +26,7 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="schools_34S20180822155036305" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/schools_34S.shp" name="schools_34S">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="residentials_34S20180822155105696" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/residentials_34S.shp" name="residentials_34S">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Intersection20180822162356925" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/residential_development/schools_roads_intersect.shp" name="schools_roads_intersect">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -34,10 +34,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>442071.51550319214584306</xmin>
-      <ymin>6228724.95444399118423462</ymin>
-      <xmax>459481.09885428316192701</xmax>
-      <ymax>6238761.48223200440406799</ymax>
+      <xmin>447703.78991715039592236</xmin>
+      <ymin>6234272.32372116670012474</ymin>
+      <xmax>449215.81155651598237455</xmax>
+      <ymax>6236212.384229626506567</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -89,11 +89,6 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="schools_roads_intersect" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Intersection20180822162356925" visible="1"/>
-      </filegroup>
-    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="roads_buffer_50m" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="버퍼20180822161922203" visible="0"/>
@@ -107,6 +102,11 @@
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="houses_34S" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="houses_34S20180822154922237" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="residentials_34S" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="residentials_34S20180822155105696" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="restuarants_34S" showFeatureCount="0">
@@ -124,14 +124,20 @@
         <legendlayerfile isInOverview="0" layerid="schools_34S20180822155036305" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="residentials_34S" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="schools_roads_intersect" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="residentials_34S20180822155105696" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="Intersection20180822162356925" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
   <projectlayers>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>446700.92824119766009971</xmin>
+        <ymin>6232556.60317823849618435</ymin>
+        <xmax>449783.07635732745984569</xmax>
+        <ymax>6236501.79231920745223761</ymax>
+      </extent>
       <id>Intersection20180822162356925</id>
       <datasource>./residential_development/schools_roads_intersect.shp</datasource>
       <keywordList>
