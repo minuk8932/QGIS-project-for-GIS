@@ -45,10 +45,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.39828550550232222</xmin>
-      <ymin>-34.07354890079869136</ymin>
-      <xmax>20.53022421892966776</xmax>
-      <ymax>-34.00080362178690763</ymax>
+      <xmin>20.38759138485977829</xmin>
+      <ymin>-34.06780081095332946</ymin>
+      <xmax>20.51953009828712382</xmax>
+      <ymax>-33.99505553194154572</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -758,6 +758,12 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="orig_ogc_f">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="AREA">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="AREA_HA">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
@@ -807,7 +813,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="osm_id" index="0" name=""/>
         <alias field="osm_way_id" index="1" name=""/>
@@ -835,6 +841,8 @@ def my_form_open(dialog, layer, feature):
         <alias field="tourism" index="23" name=""/>
         <alias field="other_tags" index="24" name=""/>
         <alias field="orig_ogc_f" index="25" name=""/>
+        <alias field="AREA" index="26" name=""/>
+        <alias field="AREA_HA" index="27" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -842,10 +850,10 @@ def my_form_open(dialog, layer, feature):
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -881,6 +889,8 @@ def my_form_open(dialog, layer, feature):
         <default field="tourism" expression=""/>
         <default field="other_tags" expression=""/>
         <default field="orig_ogc_f" expression=""/>
+        <default field="AREA" expression=""/>
+        <default field="AREA_HA" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
