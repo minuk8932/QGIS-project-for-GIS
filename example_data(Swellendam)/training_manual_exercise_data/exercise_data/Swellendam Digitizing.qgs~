@@ -42,10 +42,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>20.38358303259132853</xmin>
-      <ymin>-34.06229831283201293</ymin>
-      <xmax>20.51552174601867407</xmax>
-      <ymax>-33.98955303382022919</ymax>
+      <xmin>20.39828550550232222</xmin>
+      <ymin>-34.07354890079869136</ymin>
+      <xmax>20.53022421892966776</xmax>
+      <ymax>-34.00080362178690763</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -626,7 +626,7 @@ def my_form_open(dialog, layer, feature):
         <default field="other_tags" expression=""/>
         <default field="orig_ogc_f" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>landuse_basic_map_20180816172456851</id>
@@ -3329,6 +3329,7 @@ def my_form_open(dialog, layer, feature):
       <ProjectCRSProj4String type="QString">+proj=longlat +datum=WGS84 +no_defs</ProjectCRSProj4String>
       <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
       <ProjectCRSID type="int">3452</ProjectCRSID>
+      <ProjectionsEnabled type="int">0</ProjectionsEnabled>
     </SpatialRefSys>
     <Paths>
       <Absolute type="bool">false</Absolute>
