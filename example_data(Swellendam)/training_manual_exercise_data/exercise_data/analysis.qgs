@@ -31,10 +31,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>443929.07347540679620579</xmin>
-      <ymin>6231435.1161483395844698</ymin>
-      <xmax>454810.06306987075367942</xmax>
-      <ymax>6237707.9460158683359623</ymax>
+      <xmin>439331.93805394903756678</xmin>
+      <ymin>6229929.19600785989314318</ymin>
+      <xmax>456741.52140526962466538</xmax>
+      <ymax>6239965.7237960072234273</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -2441,7 +2441,7 @@ def my_form_open(dialog, layer, feature):
   <properties>
     <roadgraphplugin>
       <topologyToleranceFactor type="double">0</topologyToleranceFactor>
-      <speedField type="QString">항상 기본값 사용</speedField>
+      <speedField type="QString">SPEED</speedField>
       <pluginDistanceUnit type="QString">km</pluginDistanceUnit>
       <directionField type="QString">항상 기본값 사용</directionField>
       <layer type="QString">roads_34S</layer>
