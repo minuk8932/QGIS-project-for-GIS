@@ -31,10 +31,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>444329.25576749461470172</xmin>
-      <ymin>6232417.38177434541285038</ymin>
-      <xmax>453034.04744303872575983</xmax>
-      <ymax>6237435.64566835202276707</ymax>
+      <xmin>440245.85298555041663349</xmin>
+      <ymin>6229771.54843831341713667</ymin>
+      <xmax>457655.4363366428297013</xmax>
+      <ymax>6239808.07622632663697004</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -1393,6 +1393,9 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="orig_ogc_f">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="SPEED">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
@@ -1458,12 +1461,25 @@ def my_form_open(dialog, layer, feature):
         <alias field="z_order" index="7" name=""/>
         <alias field="other_tags" index="8" name=""/>
         <alias field="orig_ogc_f" index="9" name=""/>
+        <alias field="SPEED" index="10" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;osm_id&quot;" sortOrder="0">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="osm_id"/>
+          <column width="-1" hidden="0" type="field" name="name"/>
+          <column width="-1" hidden="0" type="field" name="highway"/>
+          <column width="-1" hidden="0" type="field" name="waterway"/>
+          <column width="-1" hidden="0" type="field" name="aerialway"/>
+          <column width="-1" hidden="0" type="field" name="barrier"/>
+          <column width="-1" hidden="0" type="field" name="man_made"/>
+          <column width="-1" hidden="0" type="field" name="z_order"/>
+          <column width="-1" hidden="0" type="field" name="other_tags"/>
+          <column width="-1" hidden="0" type="field" name="orig_ogc_f"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
       </attributetableconfig>
       <editform>.</editform>
       <editforminit/>
@@ -1488,8 +1504,9 @@ def my_form_open(dialog, layer, feature):
         <default field="z_order" expression=""/>
         <default field="other_tags" expression=""/>
         <default field="orig_ogc_f" expression=""/>
+        <default field="SPEED" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
@@ -2422,6 +2439,20 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
   </projectlayers>
   <properties>
+    <roadgraphplugin>
+      <topologyToleranceFactor type="double">0</topologyToleranceFactor>
+      <speedField type="QString">항상 기본값 사용</speedField>
+      <pluginDistanceUnit type="QString">km</pluginDistanceUnit>
+      <directionField type="QString">항상 기본값 사용</directionField>
+      <layer type="QString">roads_34S</layer>
+      <LastPointToFirstPointDirectionVal type="QString"></LastPointToFirstPointDirectionVal>
+      <FirstPointToLastPointDirectionVal type="QString"></FirstPointToLastPointDirectionVal>
+      <defaultSpeed type="double">60</defaultSpeed>
+      <pluginTimeUnit type="QString">h</pluginTimeUnit>
+      <defaultDirection type="int">3</defaultDirection>
+      <speedUnitName type="QString">km/h</speedUnitName>
+      <BothDirectionVal type="QString"></BothDirectionVal>
+    </roadgraphplugin>
     <Variables>
       <variableNames type="QStringList"/>
       <variableValues type="QStringList"/>
