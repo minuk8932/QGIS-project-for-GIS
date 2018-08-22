@@ -5,19 +5,19 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="osm_data_lines20180822152520422" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=lines|subset=&quot;highway&quot; = 'road'" name="roads">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="osm_data_lines20180822152520422" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=lines|subset=&quot;highway&quot;  != 'NULL' AND &quot;highway&quot; != 'unclassified' AND &quot;highway&quot; != 'track' AND &quot;highway&quot; != 'path' AND &quot;highway&quot; != 'footway'" name="roads">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="osm_data_multipolygons20180822152520451" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=multipolygons|subset=&quot;amenity&quot; = 'school'" name="schools">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="residentials_복사20180822152855628" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=multipolygons|subset=&quot;building&quot; = 'house'" name="houses">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="schools_복사20180822152705882" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=multipolygons|subset=&quot;amenity&quot; = 'restaurant'&#xa;" name="restuarants">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="restuarants_복사20180822152800018" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=multipolygons|subset=&quot;building&quot; = 'residential'" name="residentials">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="osm_data_multipolygons20180822152520451" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=multipolygons|subset=&quot;amenity&quot; = 'school'" name="schools">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="residentials_복사20180822152855628" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=multipolygons|subset=&quot;building&quot; = 'house'" name="houses">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="restuarants_복사20180822152800018" source="/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/osm_data.osm|layername=multipolygons|subset=&quot;landuse&quot;='residential'" name="residentials">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -25,10 +25,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-1900693.78160235797986388</xmin>
-      <ymin>9994621.86936208233237267</ymin>
-      <xmax>-1881919.5016403547488153</xmax>
-      <ymax>10005378.13063791766762733</ymax>
+      <xmin>444011.79328294895822182</xmin>
+      <ymin>6228231.06555459927767515</ymin>
+      <xmax>461421.37663403997430578</xmax>
+      <ymax>6238267.59334261249750853</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -46,6 +46,7 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
+      <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="roads_복사20180822153258717"/>
       <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="osm_data_lines20180822152520422"/>
       <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="osm_data_points20180822152520482"/>
       <layer_coordinate_transform destAuthId="EPSG:32734" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="residentials_복사20180822152855628"/>
@@ -69,9 +70,9 @@
         <legendlayerfile isInOverview="0" layerid="osm_data_lines20180822152520422" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="schools" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="houses" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="osm_data_multipolygons20180822152520451" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="residentials_복사20180822152855628" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="restuarants" showFeatureCount="0">
@@ -79,21 +80,27 @@
         <legendlayerfile isInOverview="0" layerid="schools_복사20180822152705882" visible="1"/>
       </filegroup>
     </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="schools" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="osm_data_multipolygons20180822152520451" visible="1"/>
+      </filegroup>
+    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="residentials" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="restuarants_복사20180822152800018" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="houses" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="residentials_복사20180822152855628" visible="1"/>
-      </filegroup>
-    </legendlayer>
   </legend>
   <projectlayers>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.4379792000000009</xmin>
+        <ymin>-34.02648310000000009</ymin>
+        <xmax>20.45247369999999876</xmax>
+        <ymax>-34.01089600000000246</ymax>
+      </extent>
       <id>osm_data_lines20180822152520422</id>
-      <datasource>./osm_data.osm|layername=lines|subset="highway" = 'road'</datasource>
+      <datasource>./osm_data.osm|layername=lines|subset="highway"  != 'NULL' AND "highway" != 'unclassified' AND "highway" != 'track' AND "highway" != 'path' AND "highway" != 'footway'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -159,7 +166,7 @@
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="194,132,172,255"/>
+              <prop k="line_color" v="70,194,45,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.26"/>
               <prop k="line_width_unit" v="MM"/>
@@ -445,6 +452,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.43324750000000023</xmin>
+        <ymin>-34.04502430000000146</ymin>
+        <xmax>20.52745249999999899</xmax>
+        <ymax>-34.01941310000000129</ymax>
+      </extent>
       <id>osm_data_multipolygons20180822152520451</id>
       <datasource>./osm_data.osm|layername=multipolygons|subset="amenity" = 'school'</datasource>
       <keywordList>
@@ -555,7 +568,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="196,2,54,255"/>
+              <prop k="color" v="0,13,196,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -890,6 +903,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.43121149999999986</xmin>
+        <ymin>-34.0385703000000035</ymin>
+        <xmax>20.45633880000000104</xmax>
+        <ymax>-34.01201900000000222</ymax>
+      </extent>
       <id>residentials_복사20180822152855628</id>
       <datasource>./osm_data.osm|layername=multipolygons|subset="building" = 'house'</datasource>
       <keywordList>
@@ -1000,7 +1019,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="185,65,196,255"/>
+              <prop k="color" v="196,1,4,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -1336,8 +1355,14 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.43444099999999963</xmin>
+        <ymin>-34.02499490000000293</ymin>
+        <xmax>20.43454750000000075</xmax>
+        <ymax>-34.02490660000000133</ymax>
+      </extent>
       <id>restuarants_복사20180822152800018</id>
-      <datasource>./osm_data.osm|layername=multipolygons|subset="building" = 'residential'</datasource>
+      <datasource>./osm_data.osm|layername=multipolygons|subset="landuse"='residential'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1782,6 +1807,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>20.43538560000000004</xmin>
+        <ymin>-34.02667569999999841</ymin>
+        <xmax>20.45230959999999953</xmax>
+        <ymax>-34.01682950000000005</ymax>
+      </extent>
       <id>schools_복사20180822152705882</id>
       <datasource>./osm_data.osm|layername=multipolygons|subset="amenity" = 'restaurant'
 </datasource>
