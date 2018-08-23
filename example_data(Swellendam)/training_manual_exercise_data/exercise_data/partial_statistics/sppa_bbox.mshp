@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <HISTORY saga-version="2.3.1">
+    <MODULE library="statistics_points" id="4" name="Spatial Point Pattern Analysis">
+      <OPTION type="double" id="STEP" name="Vertex Distance [Degree]">5.000000</OPTION>
+      <INPUT type="shapes" id="POINTS" name="Points">
+        <FILE>/Users/minchoba/Documents/QGIS/example_data(Swellendam)/training_manual_exercise_data/exercise_data/partial_statistics/random_samples.shp</FILE>
+      </INPUT>
+      <OUTPUT type="shapes" id="BBOX" name="Bounding Box">random_samples [Bounding Box]</OUTPUT>
+    </MODULE>
+  </HISTORY>
+  <SOURCE>
+    <FILE></FILE>
+    <DATABASE>
+      <FIELDS>
+        <FIELD TYPE="DOUBLE">XMIN</FIELD>
+        <FIELD TYPE="DOUBLE">XMAX</FIELD>
+        <FIELD TYPE="DOUBLE">YMIN</FIELD>
+        <FIELD TYPE="DOUBLE">YMAX</FIELD>
+      </FIELDS>
+    </DATABASE>
+    <PROJECTION>
+      <OGC_WKT>PROJCS["WGS_1984_UTM_Zone_34S",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]],PRIMEM["Greenwich",0],UNIT["Degree",0.017453292519943295]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",21],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",10000000],UNIT["Meter",1]]</OGC_WKT>
+      <PROJ4>+proj=tmerc +a=6378137.000000 +b=6356752.314245 +lat_0=0 +lon_0=21 +k_0=0.9996 +x_0=500000 +y_0=10000000 +no_defs</PROJ4>
+      <EPSG>-1</EPSG>
+    </PROJECTION>
+  </SOURCE>
+  <DESCRIPTION></DESCRIPTION>
+</SAGA_METADATA>
