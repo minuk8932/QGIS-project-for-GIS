@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/gis,macos
+# Created by https://www.gitignore.io/api/gis
 
 ### GIS ###
 *.gpx
@@ -144,4 +144,4 @@ CMakeLists.txt.user*
 *.max
 
 
-# End of https://www.gitignore.io/api/gis,macos
+# End of https://www.gitignore.io/api/gis
