@@ -4,6 +4,7 @@
 ### GIS ###
 *.gpx
 *.kml
+*.tif
 
 ### macOS ###
 # General
