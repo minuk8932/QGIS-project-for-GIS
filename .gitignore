@@ -143,5 +143,7 @@ CMakeLists.txt.user*
 *.3dm
 *.max
 
+example_data(Swellendam)/training_manual_exercise_data/exercise_data/more_analysis/DEM/reprojected/DEM
+example_data(Swellendam)/training_manual_exercise_data/exercise_data/residential_development/*.tif
 
 # End of https://www.gitignore.io/api/gis
